@@ -61,16 +61,21 @@
       </div>
       <div class="box">
         <h1>Contando Palavras</h1>
-        <form action="">
+        <form action="" name="form" id="form">
           <input
             type="text"
             id="name"
-            name="name"
+            name="word"
             class="name-input"
-            placeholder="Digite aqui"
+            placeholder="Digite alguma palavra aqui"
             required
           />
-          <input type="submit" value="Registrar" class="button" /><br />
+          <input
+            type="submit"
+            onclick="registro()"
+            value="Registrar"
+            class="button"
+          /><br />
           <textarea
             name="word"
             class="area-input"

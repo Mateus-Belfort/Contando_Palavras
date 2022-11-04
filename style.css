@@ -57,8 +57,8 @@ body {
 }
 
 .box .button {
-  padding: 8px;
-  font-size: 1.5vh;
+  padding: 7px;
+  font-size: 1.7vh;
   margin: 5px;
   background: #025e1e;
   border-radius: 5px;
@@ -76,7 +76,7 @@ body {
 
 .box .area-input {
   margin: 10px;
-  width: 95%;
+  width: 96%;
   height: 350px;
   background: #f0f3d385;
   color: #10011a;
