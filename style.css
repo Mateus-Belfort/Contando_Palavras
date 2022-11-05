@@ -36,7 +36,7 @@ body {
 }
 
 .box h1 {
-  background: rgba(196, 194, 194, 0.349);
+  background: rgba(196, 194, 194, 0.459);
   text-align: center;
   padding: 10px;
   margin-bottom: 15px;
@@ -44,6 +44,12 @@ body {
   border-radius: 8px 8px 0 0;
   font-size: 40px;
   font-family: 'Dancing+Script';
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.box h1:hover {
+  text-shadow: 7px 7px 0.1em #a02dff;
 }
 
 .box .name-input {
@@ -57,28 +63,34 @@ body {
 }
 
 .box .button {
-  padding: 7px;
+  padding: 7px 10px 10px 10px;
   font-size: 1.7vh;
-  margin: 5px;
+  margin-bottom: 5px;
+  margin-left: 4px;
   background: #025e1e;
   border-radius: 5px;
   border: none;
   color: #eee;
   font-weight: bold;
   cursor: pointer;
+  position: absolute;
+  transition: 0.4s;
 }
 
 .box .button:hover {
-  background: #4b027c;
-  box-shadow: 2px 3px 0.2em #c98ff0;
-  transition: 0.6s;
+  background: transparent;
+  border: 2px solid #8b80f9;
+  background: #10011a;
+  box-shadow: #8b80f9 0 0 10px 1px inset,
+    #8b80f9 0 0 10px 1px;
+  border-radius: 10px;
 }
 
 .box .area-input {
   margin: 10px;
   width: 96%;
   height: 350px;
-  background: #f0f3d385;
+  background: #f0f3d395;
   color: #10011a;
   font-family: 'Roboto';
   font-size: 18px;
