@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#10011a" />
-    <title>Fundo Animado</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Contando palavras</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
   </head>
   <body>
     <div class="container">
@@ -63,37 +62,33 @@
       <div class="box">
         <h1>Contando Palavras</h1>
 
-        <form action="" name="form" id="form">
-          <input
-            type="text"
-            id="name"
-            name="word"
-            class="name-input"
-            placeholder="Digite alguma palavra aqui"
-            required
-          />
-          <input
-            type="submit"
-            onclick="registro()"
-            value="Registrar"
-            class="button"
-          /><br />
-          <textarea
-            name="word"
-            class="area-input"
-            id="word"
-            cols="10"
-            wrap="hard"
-            rows="10"
-            readonly
-          ></textarea
-          ><br />
-          <div class="result">
-            <span>Palavras Digitadas: </span>
-            <span id="result" name="result"></span>
-          </div>
-        </form>
+        <input
+          type="text"
+          id="word"
+          name="word"
+          class="name-input"
+          placeholder="Digite e pressione ENTER ou clique no botão REGISTRAR"
+          required
+        />
+        <button id="register" class="button">Registrar</button>
+        <br />
+        <textarea
+          name="textArea"
+          class="area-input"
+          id="textArea"
+          cols="10"
+          wrap="hard"
+          rows="10"
+          readonly
+        ></textarea
+        ><br />
+        <div class="result">
+          <span>Palavras Digitadas: </span>
+          <span id="score" name="score"></span>
+        </div>
       </div>
     </div>
+
+    <script src="./assets/index.js"></script>
   </body>
 </html>
