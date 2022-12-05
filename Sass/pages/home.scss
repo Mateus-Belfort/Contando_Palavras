@@ -25,7 +25,7 @@ body {
 .box {
   position: relative;
   width: 65%;
-  height: 45vh;
+  height: 55vh;
   top: 20%;
   bottom: 30%;
   margin: 0 auto;
@@ -61,8 +61,8 @@ body {
 }
 
 .name-input::placeholder {
-  font-size: 1vh;
-  text-align: center;
+  font-size: 2vh;
+  text-align: left;
   align-content: center;
 }
 
@@ -110,6 +110,88 @@ body {
   text-shadow: 5px 5px 0.3em $Black;
 }
 
+.elementsicon {
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icones {
+  cursor: pointer;
+  position: relative;
+}
+
+#tooltip-reload::after {
+  content: "Limpar";
+  position: absolute;
+  background-color: $lilatransparente;
+  padding-top: 8px;
+  top: 5px;
+  font-size: 12px;
+  color: #eee;
+  left: -18px;
+  letter-spacing: 1px;
+  width: 65px;
+  height: 20px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 500ms, transform 500ms;
+}
+#tooltip-print::after {
+  content: "Imprimir";
+  position: absolute;
+  background-color: $lilatransparente;
+  padding-top: 8px;
+  top: 5px;
+  font-size: 12px;
+  color: #eee;
+  left: -55px;
+  letter-spacing: 1px;
+  width: 85px;
+  height: 20px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 500ms, transform 500ms;
+}
+#tooltip-copy::after {
+  content: "Copiar";
+  position: absolute;
+  background-color: $lilatransparente;
+  padding-top: 8px;
+  top: 5px;
+  font-size: 12px;
+  color: #eee;
+  left: 1.5px;
+  letter-spacing: 1px;
+  width: 65px;
+  height: 20px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 500ms, transform 500ms;
+}
+
+#tooltip-copy:is(:hover, :focus)::after {
+  opacity: 1;
+  transform: translateY(48px);
+}
+#tooltip-print:is(:hover, :focus)::after {
+  opacity: 1;
+  transform: translateY(48px);
+}
+
+#tooltip-reload:is(:hover, :focus)::after {
+  opacity: 1;
+  transform: translateY(48px);
+}
+
 .bolhas {
   position: absolute;
   display: flex;
@@ -155,16 +237,34 @@ body {
     align-items: center;
     gap: 10px;
   }
-  .name-input {
-    width: 90%;
-  }
+
   .button {
-    width: 30%;
+    width: 40%;
     display: flex;
     text-align: center;
   }
   .result {
     margin-top: 5px;
+  }
+}
+
+@media (max-width: 425px) {
+  .topInputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .name-input {
+    width: 100%;
+  }
+
+  .name-input::placeholder {
+    font-size: 0.8vh;
+  }
+
+  .result {
+    font-size: 24px;
   }
 }
 
@@ -179,18 +279,16 @@ body {
     gap: 10px;
   }
 
+  .topInputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
   .area-input {
     height: 30vh;
-  }
-}
-
-@media (max-width: 426px) {
-  .name-input::placeholder {
-    font-size: 0.8vh;
-  }
-
-  .result {
-    font-size: 24px;
   }
 }
 
@@ -252,5 +350,19 @@ body {
   .area-input {
     width: 100%;
     height: 27vh;
+  }
+}
+
+@media print {
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: $lilatransparente;
+    color: $Black;
+    font-size: 16px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }
