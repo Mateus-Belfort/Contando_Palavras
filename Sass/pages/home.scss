@@ -24,13 +24,25 @@ body {
 
 .box {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   width: 65%;
-  height: 55vh;
+  height: 65vh;
   top: 20%;
   bottom: 30%;
   margin: 0 auto;
   background: $transparent;
   border-radius: 8px;
+}
+
+.topInputs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 96%;
 }
 
 .box h1 {
@@ -51,9 +63,9 @@ body {
 }
 
 .name-input {
-  width: 75%;
+  width: 95%;
   padding: 8px;
-  margin-left: 10px;
+
   font-size: 1.5vh;
   font-family: "Roboto";
   border: none;
